@@ -1,0 +1,73 @@
+* {
+    border: none;
+    border-radius: 5px;
+    font-family: Roboto, Helvetica, Arial, sans-serif, font-awesome;
+    font-size: 13px;
+    min-height: 15px;
+    background: transparent;
+}
+
+/*  window#waybar {border-bottom: 3px solid rgba(100, 114, 125, 0.5);} */
+
+/* User Defined Configurations */
+
+/* What shows on mouse hover or click */
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+/* Workspace or Desktop Selectors */
+#workspaces button {
+    margin-right: 5px;
+    padding: 0 10px;
+    background: #9342f5;
+    color: white;
+    border-bottom: 3px solid black;
+    
+}
+#workspaces button.focused {
+    background: #a35ef7;
+    border-bottom: 3px solid white;
+    font-size: 13px;
+}
+
+/* Module Specific Styling */
+#cpu, #memory, #clock, #battery, #clock, #network, #custom-power {
+    padding:0 10px;
+    font-size: 13px;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #9342f5;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
