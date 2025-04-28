@@ -36,7 +36,7 @@ tooltip label {
 }
 
 /* Module Specific Styling */
-#clock, #battery, #custom-power, #custom/player {
+#clock, #battery, #custom-power, #custom-player {
     padding:0 10px;
     font-size: 13px;
     color: white;
