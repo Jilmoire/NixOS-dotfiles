@@ -2,43 +2,42 @@
     border: none;
     border-radius: 5px;
     font-family: Roboto, Helvetica, Arial, sans-serif, font-awesome;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 15px;
     background: transparent;
 }
-
-/*  window#waybar {border-bottom: 3px solid rgba(100, 114, 125, 0.5);} */
+/*
+window#waybar {
+  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+}
+*/
 
 /* User Defined Configurations */
-
 /* What shows on mouse hover or click */
 tooltip {
   background: rgba(43, 48, 59, 0.5);
   border: 1px solid rgba(100, 114, 125, 0.5);
 }
+
 tooltip label {
   color: white;
 }
 
 /* Workspace or Desktop Selectors */
-#workspaces button {
-    margin-right: 5px;
-    padding: 0 10px;
+#workspaces {
+    padding: 0;
     background: #9342f5;
+}
+#workspaces button {
     color: white;
-    border-bottom: 3px solid black;
-    
 }
 #workspaces button.focused {
     background: #a35ef7;
-    border-bottom: 3px solid white;
-    font-size: 13px;
 }
 
 /* Module Specific Styling */
-#clock, #battery, #custom-power, #custom-player {
+#clock, #battery, #custom-power, #custom-btop, #tray, #pulseaudio, #network, #bluetooth {
     padding:0 10px;
-    font-size: 13px;
     color: white;
     margin-left: 5px;
     margin-right: 5px;
@@ -55,6 +54,12 @@ tooltip label {
     background-color: #26A65B;
 }
 
+#tray > .item {
+  margin: 0 4px;
+}
+
+
+/* Keyframe Animations */
 @keyframes blink {
     to {
         background-color: #ffffff;
