@@ -23,11 +23,20 @@ set $menu rofi -show drun
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
     output * bg ~/Pictures/desktop.jpg fill
 
-# Gaps and Borders
+# Gaps
     smart_gaps inverse_outer 
     gaps inner 5px
     gaps outer 2px
     gaps top 2px
+# Borders
+    default_floating_border pixel 1
+    default_border pixel 3
+    client.focused          #5e81ac #5e81ac #ffffff #5e81ac
+    client.unfocused        #2e3440 #2e3440 #888888 #2e3440
+    client.urgent           #bf616a #bf616a #ffffff #bf616a
+    client.placeholder      #000000 #000000 #ffffff #000000
+    client.background       #1e1e2e
+
 #
 # Example configuration:
 #
